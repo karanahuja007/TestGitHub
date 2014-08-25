@@ -7,10 +7,10 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class AcitonDriver 
 {
+
+    static WebDriver driver;
 	public static void main(String[] s)
 	{
-		
-		/*WebDriver driver;
 		
 		java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
 	    java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
@@ -24,14 +24,16 @@ public class AcitonDriver
 		System.out.println("Find name as Karan");
 		driver.findElement(By.name("btnG")).click();
 		System.out.println("Clicked on find button");
-		*/
 		
-		testing();
+		
+		driverclose();
 		
 	}
 
-	private static void testing() 
+	private static void driverclose() 
 	{
+		driver.close();
+		driver.quit();
 		System.out.println("Done successfully");
 		
 	}
